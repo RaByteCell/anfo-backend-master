@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "benutzers",
+  "info": {
+    "singularName": "benutzer",
+    "pluralName": "benutzers",
+    "displayName": "benutzer"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Vorname": {
+      "type": "string"
+    },
+    "Nachname": {
+      "type": "string"
+    },
+    "Adresse": {
+      "type": "string"
+    },
+    "plz": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "geburtsdatum": {
+      "type": "date"
+    }
+  }
+}
