@@ -35,9 +35,17 @@ yarn build
 ## ⚙️ Deployment
 
 Strapi gives you many possible deployment options for your project including [Strapi Cloud](https://cloud.strapi.io). Browse the [deployment section of the documentation](https://docs.strapi.io/dev-docs/deployment) to find the best solution for your use case.
+Also install ZOD and Axios.
 
 ```
+
+npm install @hookform/resolvers
 yarn strapi deploy
+npm install @tanstack/react-query
+npm install axios
+npm install zod
+npm install react-hook-form zod @hookform/resolvers
+npm install react-hook-form
 ```
 
 ## 📚 Learn more
