@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "anfo_contacts",
+  "info": {
+    "singularName": "anfo-contact",
+    "pluralName": "anfo-contacts",
+    "displayName": "Anfo_Contact"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "vorname": {
+      "type": "string"
+    },
+    "nachname": {
+      "type": "string"
+    },
+    "adresse": {
+      "type": "string"
+    },
+    "plz": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "bdate": {
+      "type": "date"
+    }
+  }
+}

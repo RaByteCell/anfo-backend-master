@@ -443,6 +443,39 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiAnfoContactAnfoContact extends Struct.CollectionTypeSchema {
+  collectionName: 'anfo_contacts';
+  info: {
+    displayName: 'Anfo_Contact';
+    pluralName: 'anfo-contacts';
+    singularName: 'anfo-contact';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    adresse: Schema.Attribute.String;
+    bdate: Schema.Attribute.Date;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    email: Schema.Attribute.Email;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::anfo-contact.anfo-contact'
+    > &
+      Schema.Attribute.Private;
+    nachname: Schema.Attribute.String;
+    plz: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    vorname: Schema.Attribute.String;
+  };
+}
+
 export interface ApiBenutzerBenutzer extends Struct.CollectionTypeSchema {
   collectionName: 'benutzers';
   info: {
@@ -987,6 +1020,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::anfo-contact.anfo-contact': ApiAnfoContactAnfoContact;
       'api::benutzer.benutzer': ApiBenutzerBenutzer;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
