@@ -28,6 +28,16 @@
     },
     "bdate": {
       "type": "date"
+    },
+    "profilepicture": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     }
   }
 }

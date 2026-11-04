@@ -468,6 +468,9 @@ export interface ApiAnfoContactAnfoContact extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     nachname: Schema.Attribute.String;
     plz: Schema.Attribute.String;
+    profilepicture: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
